@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw                # alias du dataset (au lieu de gz_raw_data)
+    schema: gz_raw_data      # nom réel du dataset dans BigQuery
+    description: "Raw data from the GreenZilla system used for finance analytics."
+    tables:
+      - name: sales          # alias (plus simple que raw_gz_sales)
+        identifier: raw_gz_sales   # vrai nom de la table
+        description: "Contains raw sales transactions."
+      - name: product
+        identifier: raw_gz_product
+        description: "Contains raw product information."
+      - name: ship
+        identifier: raw_gz_ship
+        description: "Contains raw shipping data."
